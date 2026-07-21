@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>원내시안</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/sub_script.js"></script>
+	</head>
+  <body>
+    <div class="page-header">
+      <h1>원내시안</h1>
+      <p>병원 내부 게시용 안내 · 이벤트 포스터 디자인입니다.</p>
+    </div>
+
+    <div class="poster-slider">
+      <button type="button" class="slider-btn prev" aria-label="이전 포스터">&#10094;</button>
+      <div class="slider-viewport">
+        <div class="slider-track">
+          <div class="slider-slide"><img src="images/density.jpg" alt="덴서티하이" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/v_ro_lifting.jpg" alt="브이로리프팅" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/event_3.jpg" alt="이벤트 포스터 1" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/event_4.jpg" alt="이벤트 포스터 2" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/notice01.jpg" alt="공지 포스터 1" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/notice02.jpg" alt="공지 포스터 2" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/notice03.jpg" alt="공지 포스터 3" loading="lazy"></div>
+        </div>
+      </div>
+      <button type="button" class="slider-btn next" aria-label="다음 포스터">&#10095;</button>
+    </div>
+    <div class="slider-counter"></div>
+
+    <div class="poster-modal" id="poster-modal" aria-hidden="true">
+      <div class="poster-modal__backdrop"></div>
+      <div class="poster-modal__dialog">
+        <button type="button" class="poster-modal__close" aria-label="닫기">&times;</button>
+        <div class="poster-modal__frame">
+          <img id="poster-modal-img" src="" alt="">
+        </div>
+      </div>
+    </div>
+
+	<div class="top fixed">
+		<a href="#" class="scroll-btn" aria-label="맨 위로">&#8593;</a>
+	</div>
+	<div class="fixed2">
+		<a href="../../index.html#projects" onclick="window.close()" class="scroll-btn" aria-label="뒤로가기">&#8592;</a>
+	</div>
+
+    <script src="js/slider.js"></script>
+    <script src="js/lightbox.js"></script>
+  </body>
+</html>

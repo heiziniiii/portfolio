@@ -1,0 +1,218 @@
+@charset "utf-8";
+@import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i,900,900i';
+
+@font-face { font-family: 'Pretendard'; src: url('../../../fonts/Pretendard-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../../../fonts/Pretendard-ExtraLight.ttf') format('truetype'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../../../fonts/Pretendard-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../../../fonts/Pretendard-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../../../fonts/Pretendard-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../../../fonts/Pretendard-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../../../fonts/Pretendard-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../../../fonts/Pretendard-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../../../fonts/Pretendard-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fafafa;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+}
+
+.page-header {
+  max-width: 1320px;
+  margin: 60px auto 35px;
+  padding: 0 20px;
+  text-align: center;
+}
+.page-header h1 {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #ff99be;
+  margin-bottom: 23px;
+  letter-spacing: 1px;
+}
+.page-header p {
+  font-family: 'Pretendard', sans-serif;
+  color: #777;
+  font-size: 14px;
+}
+
+.poster-slider {
+  display: flex;
+  align-items: center;
+  max-width: 1320px;
+  margin: 0 auto 14px;
+  padding: 0 10px;
+  gap: 12px;
+}
+
+.slider-viewport {
+  overflow: hidden;
+  flex: 1;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform .4s ease;
+}
+
+.slider-slide {
+  flex: 0 0 33.3333%;
+  min-width: 0;
+  padding: 0 10px;
+}
+.slider-slide img {
+  width: 100%;
+  display: block;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .12);
+  cursor: pointer;
+}
+
+.slider-btn {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  color: #7388d3;
+  transition: all .2s ease-in-out;
+}
+.slider-btn:hover:not(:disabled) {
+  background: #7388d3;
+  color: #fff;
+  border-color: #7388d3;
+}
+.slider-btn:disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+.slider-counter {
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 80px;
+  letter-spacing: .5px;
+}
+
+@media (max-width: 999px) {
+  .slider-slide {
+    flex: 0 0 50%;
+  }
+}
+@media (max-width: 699px) {
+  .slider-slide {
+    flex: 0 0 100%;
+  }
+  .poster-slider {
+    gap: 6px;
+  }
+  .slider-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+
+.poster-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+}
+.poster-modal.is-open {
+  display: block;
+}
+.poster-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .82);
+}
+.poster-modal__dialog {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 60px;
+  pointer-events: none;
+}
+.poster-modal__close,
+.poster-modal__frame {
+  pointer-events: auto;
+}
+.poster-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, .15);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.poster-modal__close:hover {
+  background: rgba(255, 255, 255, .3);
+}
+.poster-modal__frame img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+}
+
+.fixed {
+  position: fixed;
+  right: 40px;
+  bottom: 100px;
+}
+.fixed:hover {
+  opacity: .8;
+}
+.fixed2 {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+}
+.fixed2:hover {
+  opacity: .8;
+}
+
+.scroll-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #7388d3;
+  color: #7388d3;
+  font-size: 20px;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  transition: all .2s ease-in-out;
+}
+.scroll-btn:hover {
+  background: #7388d3;
+  color: #fff;
+  text-decoration: none;
+}
