@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>연세바른마취통증의학과 포스팅 컨텐츠</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/sub_script.js"></script>
+	</head>
+  <body>
+    <div class="page-header">
+      <h1>연세바른마취통증의학과</h1>
+      <p>연세바른마취통증의학과 포스팅 컨텐츠입니다.<br>카드를 클릭하면 슬라이드를 크게 볼 수 있습니다.</p>
+    </div>
+
+    <div class="campaign-grid" id="campaign-grid"></div>
+
+    <div class="cn-modal" id="cn-modal" aria-hidden="true">
+      <div class="cn-modal__backdrop"></div>
+      <div class="cn-modal__dialog">
+        <button type="button" class="cn-modal__close" aria-label="닫기">&times;</button>
+        <button type="button" class="cn-slide-btn prev" aria-label="이전 슬라이드">&#10094;</button>
+        <div class="cn-slide-viewport">
+          <div class="cn-slide-track"></div>
+        </div>
+        <button type="button" class="cn-slide-btn next" aria-label="다음 슬라이드">&#10095;</button>
+        <div class="cn-slide-counter"></div>
+      </div>
+    </div>
+
+	<div class="top fixed">
+		<a href="#" class="scroll-btn" aria-label="맨 위로">&#8593;</a>
+	</div>
+	<div class="fixed2">
+		<a href="../../../index.html#projects" onclick="window.close()" class="scroll-btn" aria-label="뒤로가기">&#8592;</a>
+	</div>
+
+    <script>
+      window.CAMPAIGNS = [
+  {
+    "title": "손목건초염",
+    "date": "2026.03.25",
+    "images": [
+      "images/260325_손목건초염/1.jpg",
+      "images/260325_손목건초염/2.jpg",
+      "images/260325_손목건초염/3.jpg",
+      "images/260325_손목건초염/4.jpg",
+      "images/260325_손목건초염/5.jpg"
+    ]
+  },
+  {
+    "title": "거북목",
+    "date": "2026.03.24",
+    "images": [
+      "images/260324_거북목/1.jpg",
+      "images/260324_거북목/2.jpg",
+      "images/260324_거북목/3.jpg",
+      "images/260324_거북목/4.jpg",
+      "images/260324_거북목/5.jpg"
+    ]
+  },
+  {
+    "title": "회전근개파열",
+    "date": "2026.03.12",
+    "images": [
+      "images/260312_회전근개파열/1.jpg",
+      "images/260312_회전근개파열/2.jpg",
+      "images/260312_회전근개파열/3.jpg",
+      "images/260312_회전근개파열/4.jpg"
+    ]
+  },
+  {
+    "title": "라운드숄더",
+    "date": "2026.03.11",
+    "images": [
+      "images/260311_라운드숄더/1.jpg",
+      "images/260311_라운드숄더/2.jpg",
+      "images/260311_라운드숄더/3.jpg",
+      "images/260311_라운드숄더/4.jpg",
+      "images/260311_라운드숄더/5.jpg",
+      "images/260311_라운드숄더/6.jpg"
+    ]
+  },
+  {
+    "title": "척추측만증",
+    "date": "2026.03.05",
+    "images": [
+      "images/260305_척추측만증/1.jpg",
+      "images/260305_척추측만증/2.jpg",
+      "images/260305_척추측만증/3.jpg",
+      "images/260305_척추측만증/4.jpg"
+    ]
+  },
+  {
+    "title": "테니스엘보",
+    "date": "2026.03.05",
+    "images": [
+      "images/260305_테니스엘보/1.jpg",
+      "images/260305_테니스엘보/2.jpg",
+      "images/260305_테니스엘보/3.jpg",
+      "images/260305_테니스엘보/4.jpg"
+    ]
+  },
+  {
+    "title": "신경차단술",
+    "date": "2026.03.04",
+    "images": [
+      "images/260304_신경차단술/1.jpg",
+      "images/260304_신경차단술/2.jpg",
+      "images/260304_신경차단술/3.jpg",
+      "images/260304_신경차단술/4.jpg"
+    ]
+  },
+  {
+    "title": "허리디스크",
+    "date": "2026.03.04",
+    "images": [
+      "images/260304_허리디스크/1.jpg",
+      "images/260304_허리디스크/2.jpg",
+      "images/260304_허리디스크/3.jpg",
+      "images/260304_허리디스크/4.jpg",
+      "images/260304_허리디스크/5.jpg"
+    ]
+  },
+  {
+    "title": "도수치료",
+    "date": "2026.03.03",
+    "images": [
+      "images/260303_도수치료/1.jpg",
+      "images/260303_도수치료/2.jpg",
+      "images/260303_도수치료/3.jpg",
+      "images/260303_도수치료/4.jpg"
+    ]
+  },
+  {
+    "title": "손목터널증후군",
+    "date": "2026.02.20",
+    "images": [
+      "images/260220_손목터널증후군/1.jpg",
+      "images/260220_손목터널증후군/2.jpg",
+      "images/260220_손목터널증후군/3.jpg",
+      "images/260220_손목터널증후군/4.jpg",
+      "images/260220_손목터널증후군/5.jpg"
+    ]
+  },
+  {
+    "title": "오십견",
+    "date": "2025.11.21",
+    "images": [
+      "images/251121_오십견/1.jpg",
+      "images/251121_오십견/2.jpg",
+      "images/251121_오십견/3.jpg",
+      "images/251121_오십견/4.jpg"
+    ]
+  },
+  {
+    "title": "무릎관절염",
+    "date": "2025.11.12",
+    "images": [
+      "images/251112_무릎관절염/1.jpg",
+      "images/251112_무릎관절염/2.jpg",
+      "images/251112_무릎관절염/3.jpg",
+      "images/251112_무릎관절염/4.jpg",
+      "images/251112_무릎관절염/5.jpg"
+    ]
+  },
+  {
+    "title": "일자척추",
+    "date": "2025.11.11",
+    "images": [
+      "images/251111_일자척추/1.jpg",
+      "images/251111_일자척추/2.jpg",
+      "images/251111_일자척추/3.jpg",
+      "images/251111_일자척추/4.jpg",
+      "images/251111_일자척추/5.jpg"
+    ]
+  }
+];
+    </script>
+    <script src="js/cardnews.js"></script>
+  </body>
+</html>
