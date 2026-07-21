@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>뷰티스피부과 포스팅 컨텐츠</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/sub_script.js"></script>
+	</head>
+  <body>
+    <div class="page-header">
+      <h1>뷰티스피부과</h1>
+      <p>뷰티스피부과 포스팅 컨텐츠입니다.<br>카드를 클릭하면 슬라이드를 크게 볼 수 있습니다.</p>
+    </div>
+
+    <div class="campaign-grid" id="campaign-grid"></div>
+
+    <div class="cn-modal" id="cn-modal" aria-hidden="true">
+      <div class="cn-modal__backdrop"></div>
+      <div class="cn-modal__dialog">
+        <button type="button" class="cn-modal__close" aria-label="닫기">&times;</button>
+        <button type="button" class="cn-slide-btn prev" aria-label="이전 슬라이드">&#10094;</button>
+        <div class="cn-slide-viewport">
+          <div class="cn-slide-track"></div>
+        </div>
+        <button type="button" class="cn-slide-btn next" aria-label="다음 슬라이드">&#10095;</button>
+        <div class="cn-slide-counter"></div>
+      </div>
+    </div>
+
+	<div class="top fixed">
+		<a href="#" class="scroll-btn" aria-label="맨 위로">&#8593;</a>
+	</div>
+	<div class="fixed2">
+		<a href="../../../index.html#projects" onclick="window.close()" class="scroll-btn" aria-label="뒤로가기">&#8592;</a>
+	</div>
+
+    <script>
+      window.CAMPAIGNS = [
+  {
+    "title": "다한증,액취증",
+    "date": "2026.03.17",
+    "images": [
+      "images/260317_다한증,액취증/1.jpg",
+      "images/260317_다한증,액취증/2.jpg",
+      "images/260317_다한증,액취증/3.jpg",
+      "images/260317_다한증,액취증/4.jpg",
+      "images/260317_다한증,액취증/5.jpg"
+    ]
+  },
+  {
+    "title": "목주름",
+    "date": "2026.02.24",
+    "images": [
+      "images/260224_목주름/1.jpg",
+      "images/260224_목주름/2.jpg",
+      "images/260224_목주름/3.jpg",
+      "images/260224_목주름/4.jpg"
+    ]
+  }
+];
+    </script>
+    <script src="js/cardnews.js"></script>
+  </body>
+</html>
