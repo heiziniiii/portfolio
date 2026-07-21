@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>넬의원 포스팅 컨텐츠</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/sub_script.js"></script>
+	</head>
+  <body>
+    <div class="page-header">
+      <h1>넬의원</h1>
+      <p>넬의원 포스팅 컨텐츠입니다.<br>카드를 클릭하면 슬라이드를 크게 볼 수 있습니다.</p>
+    </div>
+
+    <div class="campaign-grid" id="campaign-grid"></div>
+
+    <div class="cn-modal" id="cn-modal" aria-hidden="true">
+      <div class="cn-modal__backdrop"></div>
+      <div class="cn-modal__dialog">
+        <button type="button" class="cn-modal__close" aria-label="닫기">&times;</button>
+        <button type="button" class="cn-slide-btn prev" aria-label="이전 슬라이드">&#10094;</button>
+        <div class="cn-slide-viewport">
+          <div class="cn-slide-track"></div>
+        </div>
+        <button type="button" class="cn-slide-btn next" aria-label="다음 슬라이드">&#10095;</button>
+        <div class="cn-slide-counter"></div>
+      </div>
+    </div>
+
+	<div class="top fixed">
+		<a href="#" class="scroll-btn" aria-label="맨 위로">&#8593;</a>
+	</div>
+	<div class="fixed2">
+		<a href="../../../index.html#projects" onclick="window.close()" class="scroll-btn" aria-label="뒤로가기">&#8592;</a>
+	</div>
+
+    <script>
+      window.CAMPAIGNS = [
+  {
+    "title": "바디윤곽주사",
+    "date": "2026.03.11",
+    "images": [
+      "images/260311_바디윤곽주사/1.jpg",
+      "images/260311_바디윤곽주사/2.jpg",
+      "images/260311_바디윤곽주사/3.jpg",
+      "images/260311_바디윤곽주사/4.jpg",
+      "images/260311_바디윤곽주사/5.jpg"
+    ]
+  },
+  {
+    "title": "고우리",
+    "date": "2026.03.10",
+    "images": [
+      "images/260310_고우리/1.jpg",
+      "images/260310_고우리/2.jpg",
+      "images/260310_고우리/3.jpg",
+      "images/260310_고우리/4.jpg"
+    ]
+  },
+  {
+    "title": "라풀렌",
+    "date": "2026.03.09",
+    "images": [
+      "images/260309_라풀렌/1.jpg",
+      "images/260309_라풀렌/2.jpg",
+      "images/260309_라풀렌/3.jpg",
+      "images/260309_라풀렌/4.jpg",
+      "images/260309_라풀렌/5.jpg"
+    ]
+  },
+  {
+    "title": "브이올렛주사",
+    "date": "2026.03.09",
+    "images": [
+      "images/260309_브이올렛주사/1.jpg",
+      "images/260309_브이올렛주사/2.jpg",
+      "images/260309_브이올렛주사/3.jpg",
+      "images/260309_브이올렛주사/4.jpg"
+    ]
+  },
+  {
+    "title": "리니어z",
+    "date": "2026.02.09",
+    "images": [
+      "images/260209_리니어z/1.jpg",
+      "images/260209_리니어z/2.jpg",
+      "images/260209_리니어z/3.jpg",
+      "images/260209_리니어z/4.jpg",
+      "images/260209_리니어z/5.jpg"
+    ]
+  }
+];
+    </script>
+    <script src="js/cardnews.js"></script>
+  </body>
+</html>
