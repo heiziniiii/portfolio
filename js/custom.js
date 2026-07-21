@@ -82,15 +82,18 @@ $(document).ready(function () {
     //  isotope
     $('#projects').waitForImages(function () {
         var $container = $('.portfolio_container');
+
         $container.isotope({
             filter: '*',
+            layoutMode: 'fitRows'
         });
 
         $('.portfolio_filter a').click(function () {
-            $('.portfolio_filter .active').removeClass('active');
-            $(this).addClass('active');
+            var $link = $(this);
+            $link.closest('.portfolio_filter').find('a').removeClass('active');
+            $link.addClass('active');
 
-            var selector = $(this).attr('data-filter');
+            var selector = $link.attr('data-filter');
             $container.isotope({
                 filter: selector,
                 animationOptions: {
