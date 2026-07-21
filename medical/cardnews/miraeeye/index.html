@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>미래아이병원 포스팅 컨텐츠</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/sub_script.js"></script>
+	</head>
+  <body>
+    <div class="page-header">
+      <h1>미래아이병원</h1>
+      <p>미래아이병원 포스팅 컨텐츠입니다.<br>카드를 클릭하면 슬라이드를 크게 볼 수 있습니다.</p>
+    </div>
+
+    <div class="campaign-grid" id="campaign-grid"></div>
+
+    <div class="cn-modal" id="cn-modal" aria-hidden="true">
+      <div class="cn-modal__backdrop"></div>
+      <div class="cn-modal__dialog">
+        <button type="button" class="cn-modal__close" aria-label="닫기">&times;</button>
+        <button type="button" class="cn-slide-btn prev" aria-label="이전 슬라이드">&#10094;</button>
+        <div class="cn-slide-viewport">
+          <div class="cn-slide-track"></div>
+        </div>
+        <button type="button" class="cn-slide-btn next" aria-label="다음 슬라이드">&#10095;</button>
+        <div class="cn-slide-counter"></div>
+      </div>
+    </div>
+
+	<div class="top fixed">
+		<a href="#" class="scroll-btn" aria-label="맨 위로">&#8593;</a>
+	</div>
+	<div class="fixed2">
+		<a href="../../../index.html#projects" onclick="window.close()" class="scroll-btn" aria-label="뒤로가기">&#8592;</a>
+	</div>
+
+    <script>
+      window.CAMPAIGNS = [
+  {
+    "title": "자궁내막증 오해와 진실",
+    "date": "2026.01.08",
+    "images": [
+      "images/260108_자궁내막증 오해와 진실/1.jpg",
+      "images/260108_자궁내막증 오해와 진실/2.jpg",
+      "images/260108_자궁내막증 오해와 진실/3.jpg",
+      "images/260108_자궁내막증 오해와 진실/4.jpg"
+    ]
+  },
+  {
+    "title": "무월경,월경과다",
+    "date": "2025.11.28",
+    "images": [
+      "images/251128_무월경,월경과다/1.jpg",
+      "images/251128_무월경,월경과다/2.jpg",
+      "images/251128_무월경,월경과다/3.jpg",
+      "images/251128_무월경,월경과다/4.jpg"
+    ]
+  }
+];
+    </script>
+    <script src="js/cardnews.js"></script>
+  </body>
+</html>
