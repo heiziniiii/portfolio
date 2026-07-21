@@ -24,12 +24,22 @@
 /* Google fonts & font family
 ==================================================*/
 
-@import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i';
+@import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i,900,900i';
 
-/* 
+@font-face { font-family: 'Pretendard'; src: url('../fonts/Pretendard-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../fonts/Pretendard-ExtraLight.ttf') format('truetype'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../fonts/Pretendard-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../fonts/Pretendard-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../fonts/Pretendard-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../fonts/Pretendard-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../fonts/Pretendard-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../fonts/Pretendard-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Pretendard'; src: url('../fonts/Pretendard-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+
+/*
 font-family: 'Playfair Display', serif;
 font-family: 'Lato', sans-serif;
-font-family: 'Open Sans', sans-serif; */
+font-family: 'Pretendard', sans-serif; */
 
 
 
@@ -69,7 +79,7 @@ h4:before {
 ==================================================*/
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pretendard', sans-serif;
     font-size: 14px;
     line-height: 24px;
 }
@@ -800,7 +810,6 @@ a.active {
 }
 
 
-
 .portfolio-padding {
     padding: 50px 0;
 }
@@ -1085,3 +1094,69 @@ padding-top:10px;}
 
 .portfolio_bg{background:url(../img/portfolio/01.jpg);}
 .category{ display: inline-block; margin-left:6px; font-size: 16px; color: #ccc;}
+
+/* portfolio placeholder cards ("준비중") */
+.portfolio_item_thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eceff8;
+    color: #7388d3;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.coming-soon-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    background: #7388d3;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Featured tiles: WEB / HOTEL / 원내시안 / E.T.C */
+.portfolio_card_col {
+    margin-bottom: 30px;
+}
+.portfolio_card {
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    height: 100%;
+}
+.portfolio_card__thumb {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #eee;
+    position: relative;
+}
+.portfolio_card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.portfolio_card__body {
+    padding: 20px 22px 24px;
+    height: 162px;
+    display: flex;
+    flex-direction: column;
+}
+.portfolio_card__body .project_btn_box {
+    margin-top: auto;
+}
+.portfolio_card__title {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.portfolio_card__desc {
+    margin: 0 0 6px;
+    font-size: 13px;
+    color: #777;
+    word-break: break-all;
+}
