@@ -23,3 +23,25 @@ div img{
 .fixed2:hover{
   opacity:0.8;
 }
+
+.scroll-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #7388d3;
+  color: #7388d3;
+  font-size: 20px;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  transition: all .2s ease-in-out;
+}
+.scroll-btn:hover {
+  background: #7388d3;
+  color: #fff;
+  text-decoration: none;
+}
