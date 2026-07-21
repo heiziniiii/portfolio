@@ -1093,7 +1093,11 @@ fieldset {
 .project_btn:hover{color:#fff;
 	background:skyblue;}
 .project_btn_box{text-align:left;
-padding-top:10px;}
+padding-top:10px;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+row-gap:8px;}
 .clear{clear:both;}
 
 .portfolio_item{
@@ -1152,7 +1156,7 @@ padding-top:10px;}
 }
 .portfolio_card__body {
     padding: 20px 22px 24px;
-    height: 162px;
+    min-height: 162px;
     display: flex;
     flex-direction: column;
 }
@@ -1160,11 +1164,10 @@ padding-top:10px;}
     margin-top: auto;
 }
 .tool-badges {
-    float: right;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-top: 6px;
+    margin-left: auto;
 }
 .tool-badge {
     display: inline-flex;
