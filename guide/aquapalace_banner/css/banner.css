@@ -279,4 +279,11 @@ body{
   .banner-desc{ padding:20px 20px 18px; }
   .banner-desc__title{ font-size:16px; }
   .banner-desc__text{ font-size:12.5px; }
+
+  /* mobile: images only — the description panel never opens (see banner.js),
+     so the click hint and clickable look are both dropped */
+  .desc-hint{ display:none; }
+  .banner-item__card{ cursor:default; }
+  .banner-item__card:hover{ transform:none; box-shadow:0 2px 10px rgba(0,0,0,.08); }
+  .banner-item__card:hover .banner-item__thumb::after{ left:-70%; }
 }

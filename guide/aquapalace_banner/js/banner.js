@@ -15,6 +15,11 @@
 	var activeIndex = null;
 	var items = [];
 	var descEl = null;
+	var MOBILE_MAX = 640; // below this, images only — no description panel
+
+	function isMobile() {
+		return window.innerWidth <= MOBILE_MAX;
+	}
 
 	function buildDOM() {
 		DATA.forEach(function (b, i) {
@@ -117,6 +122,7 @@
 	}
 
 	function toggle(i) {
+		if (isMobile()) return; // mobile: tap just browses images, no description panel
 		activeIndex = (activeIndex === i) ? null : i;
 		render(true);
 	}
@@ -141,6 +147,7 @@
 	window.addEventListener('resize', function () {
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(function () {
+			if (isMobile() && activeIndex !== null) activeIndex = null; // shrank below mobile breakpoint with panel open
 			computeMetrics();
 			render(false);
 		}, 120);
