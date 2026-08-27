@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>POSTER</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/sub_script.js"></script>
+	</head>
+  <body>
+    <div class="page-header">
+      <h1>호텔 아쿠아펠리스</h1>
+      <p>객실 · 부대시설 안내 및 프로모션 포스터 디자인입니다.</p>
+    </div>
+
+    <div class="poster-slider">
+      <button type="button" class="slider-btn prev" aria-label="이전 포스터">&#10094;</button>
+      <div class="slider-viewport">
+        <div class="slider-track">
+          <div class="slider-slide"><img src="images/1.jpg" alt="새해맞이 특별혜택 포스터" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/2.jpg" alt="Spa &amp; Breakfast 포스터" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/3.jpg" alt="Swimwear 판매 포스터" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/4.jpg" alt="CICA 4-STEP KIT 포스터" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/5.jpg" alt="Self Photo 안내 포스터" loading="lazy"></div>
+          <div class="slider-slide"><img src="images/6.jpg" alt="가정의달 선물쿠폰 포스터" loading="lazy"></div>
+        </div>
+      </div>
+      <button type="button" class="slider-btn next" aria-label="다음 포스터">&#10095;</button>
+    </div>
+    <div class="slider-counter"></div>
+
+    <div class="poster-modal" id="poster-modal" aria-hidden="true">
+      <div class="poster-modal__backdrop"></div>
+      <div class="poster-modal__dialog">
+        <button type="button" class="poster-modal__close" aria-label="닫기">&times;</button>
+        <div class="poster-modal__frame">
+          <img id="poster-modal-img" src="" alt="">
+        </div>
+      </div>
+    </div>
+
+	<div class="top fixed">
+		<a href="#" class="scroll-btn" aria-label="맨 위로">&#8593;</a>
+	</div>
+	<div class="fixed2">
+		<a href="../../index.html#projects" onclick="window.close()" class="scroll-btn" aria-label="뒤로가기">&#8592;</a>
+	</div>
+
+    <script src="js/slider.js"></script>
+    <script src="js/lightbox.js"></script>
+  </body>
+</html>
